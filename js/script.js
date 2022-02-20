@@ -17,7 +17,11 @@ area.addEventListener('click', e=>{
 });
 
 const check = () => {
-    const boxes = document.getElementsByClassName('box');
+	var boxes = [9]
+	for (i = 0; i < 9; i++) {
+		boxes[i] = document.getElementById('box' + i);
+	}
+    //const boxes = document.getElementsByClassName('box');
     console.log(boxes);
     const arr = [
         [0,1,2],
