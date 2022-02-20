@@ -10,14 +10,21 @@ const btnClose = document.getElementById('btn-close');
 area.addEventListener('click', e=>{
     if(e.target.className = 'box') {
         console.log(e.target);
-        move % 2 === 0 ? e.target.innerHTML = "X" : e.target.innerHTML = "O";
-        move++;
+	let mark;
+	mark = move % 2 == 0 ? "X" : "O";
+	if (!e.target.innerHTML) {
+		e.target.innerHTML = mark;
+		move++;
+	}
+	if (move == 9) {
+            prepareResult(0);
+	}
         check();
     }
 });
 
 const check = () => {
-	var boxes = [9]
+	let boxes = [9]
 	for (i = 0; i < 9; i++) {
 		boxes[i] = document.getElementById('box' + i);
 	}
@@ -48,7 +55,10 @@ const check = () => {
     }
 }
 const prepareResult = winner => {
-    contentWrapper.innerHTML = `Затащили ${winner}!`;
+	let message = `Затащили ${winner}!`;
+	if (winner == 0)
+		message = 'Ничья!';
+    contentWrapper.innerHTML = message;
     modalResult.style.display = 'block';
 }
 
