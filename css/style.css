@@ -21,7 +21,7 @@ body{
     display: flex;
     flex-wrap: wrap;
 }
-#box{
+.box{
     width: 100px;
     height: 100px;
     border: 2px solid black;
@@ -35,10 +35,10 @@ body{
     cursor: pointer;
     transition: all 0.4s ease;
 }
-#box:hover{
+.box:hover{
     background-color: #E0B179;
 }
-#box:active{
+.box:active{
     background-color: #765C3D;
 }
 #modal-result-wrapper{
