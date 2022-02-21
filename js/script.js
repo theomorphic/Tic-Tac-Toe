@@ -1,5 +1,7 @@
 const area = document.getElementById('area');
-const button_change = document.getElementById('btn-change');
+const btn_change1 = document.getElementById('btn-change1');
+const btn_change2 = document.getElementById('btn-change2');
+const btn_change3 = document.getElementById('btn-change3');
 
 const MODE_2P = '2 Players';
 const MODE_AI = 'AI';
@@ -9,8 +11,7 @@ const X_MARK = "X";
 const O_MARK = "O";
 
 let mark = X_MARK;
-let mode = MODE_2P;
-button_change.innerHTML = mode;
+let mode = MODE_AI;
 
 let result = '';
 const contentWrapper = document.getElementById('content');
@@ -35,19 +36,16 @@ function reload()
 		document.getElementById('box' + i).innerHTML = '';
 }
 
-button_change.addEventListener('click', e=>{
-	switch (mode) {
-	case MODE_2P:
-		mode = MODE_AI;
-		break;
-	case MODE_AI:
-		mode = MODE_NINNY;
-		break;
-	case MODE_NINNY:
-		mode = MODE_2P;
-		break;
-	}
-	e.target.innerHTML = mode;
+btn_change1.addEventListener('click', e=>{
+	mode = MODE_AI;
+	reload();
+});
+btn_change2.addEventListener('click', e=>{
+	mode = MODE_2P;
+	reload();
+});
+btn_change3.addEventListener('click', e=>{
+	mode = MODE_NINNY;
 	reload();
 });
 

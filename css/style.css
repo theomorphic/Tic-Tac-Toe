@@ -10,10 +10,12 @@ body{
 .button-change{
     display: flex;
     justify-content: center;
+    gap:20px;
+    align-items: center;
     padding: 10px;
     margin-top: 5%;
 }
-#btn-change:hover{
+.btn-change:hover{
 	cursor: pointer;
 	background-color: #E0B179;
 }
