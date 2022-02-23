@@ -1,5 +1,6 @@
 body{
-    background-color: bisque; 
+    background-color: bisque;
+    position: relative; 
 }
 .header{
     display: flex;
@@ -89,13 +90,13 @@ a{
 }
 ul{
 	position: absolute;
-	top: 70%;
+	top: 120%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	display: flex;
     background-color: bisque;
 	overflow: hidden;
-	margin: 0;
+	margin-top: 0;
 	padding: 0;
 }
 ul li{
