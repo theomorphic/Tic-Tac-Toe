@@ -28,11 +28,12 @@
             <div class="box" id="box8"></div>
         </div>
     </div>
-    <div class="button-change">
-        <h2 class="btn-change" id="btn-change1">С мозгом</h2>
-        <h2 class="btn-change" id="btn-change2">На пару</h2>
-        <h2 class="btn-change" id="btn-change3">Для слабаков</h2>
-    </div>
+        <ul>
+            <li class="active" class="btn-change" id="btn-change1"><a href="#AI">С мозгом</a></li>
+            <li class="btn-change" id="btn-change2"><a href="#Multiplay">На пару</a></li>
+            <li class="btn-change" id="btn-change3"><a href="#Easy">Для слабаков</a></li>
+            <li class="slide"></li>
+        </ul>
     <div id="modal-result-wrapper">
         <div id="overlay">
             <div id="modal-window">
@@ -41,6 +42,15 @@
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('li').on('click', function(){
+				$(this).siblings().removeClass('active');
+				$(this).addClass('active');
+			})
+		})
+	</script>
     <script src="js/script.js"></script>
 </body>
 </html>

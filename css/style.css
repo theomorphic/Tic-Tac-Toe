@@ -7,22 +7,11 @@ body{
     padding: 10px;
     margin-bottom: 5%;
 }
-.button-change{
-    display: flex;
-    justify-content: center;
-    gap:20px;
-    align-items: center;
-    padding: 10px;
-    margin-top: 5%;
-}
-.btn-change:hover{
-	cursor: pointer;
-	background-color: #E0B179;
-}
 a{
     text-decoration: none;
     font-size: 25px;
-    color: black;
+    color:black;
+    font-weight: bold;
 }
 .area-wrapper{
     width: 100%;
@@ -86,7 +75,7 @@ a{
     flex-flow: column;
     justify-content: space-between;
     align-items: center;
-    font-size: 34px;
+    font-size: 30px;
 }
 #btn-close{
     width: 300px;
@@ -95,6 +84,55 @@ a{
     color: black;
     text-align: center;
     cursor: pointer;
-    font-size: 34px;
+    font-size: 30px;
     border: 3px solid black; 
+}
+ul{
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+    background-color: bisque;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+ul li{
+	list-style: none;
+	width: 200px;
+}
+ul li a{
+	display: block;
+	padding: 5px;
+	text-align: center;
+	color: black;
+	transition: 0.5s;
+	text-decoration: none;
+}
+ul li.active a{
+	color: #262626;
+}
+.slide{
+	position: absolute;
+	width: 200px;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #E0B179;
+	z-index: -1;
+	transition: 0.5s;
+	opacity: 0;
+}	
+ul li:nth-child(1).active ~ .slide{
+	left: 0;
+	opacity: 1;
+}
+ul li:nth-child(2).active ~ .slide{
+	left: 200px;
+	opacity: 1;
+}
+ul li:nth-child(3).active ~ .slide{
+	left: 400px;
+	opacity: 1;
 }
